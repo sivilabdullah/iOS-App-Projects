@@ -66,11 +66,44 @@
                         <outlet property="PasswdTextField" destination="PGZ-O8-glb" id="fML-sB-EAZ"/>
                         <outlet property="UsrnmeTextField" destination="hvC-DA-2tq" id="rT0-am-YZi"/>
                         <outlet property="warningLabel" destination="rik-kU-pnO" id="7a5-e6-IL0"/>
+                        <segue destination="984-ht-ckN" kind="show" identifier="loginSegue" id="fT4-KE-KYn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-51.145038167938928" y="-256.33802816901408"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="CPX-DZ-BaW">
+            <objects>
+                <viewController id="984-ht-ckN" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="V6v-Da-a9L">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Login Succesfully" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="uWe-kO-9bT">
+                                <rect key="frame" x="16" y="59" width="350" height="78"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="48"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome Abdullah" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="2gu-mt-OOm">
+                                <rect key="frame" x="16" y="130" width="348" height="66"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="29"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="kAY-yS-0kB"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="BWj-z4-xS9"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Go1-8N-NCT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="743" y="-246"/>
         </scene>
     </scenes>
     <resources>

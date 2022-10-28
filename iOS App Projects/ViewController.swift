@@ -34,21 +34,34 @@ class ViewController: UIViewController {
             
             if !(PasswdTextField.isHidden), PasswdTextField.text == "123456789" {
                 LoadinfoActivtyIndicator.startAnimating()
+                performSegue(withIdentifier: "loginSegue", sender: self)
                 warningLabel.isHidden = true
             }
             else if UsrnmeTextField.text == "" {
-                warningLabel.isHidden = true
-                warningLabel.text = "Username should not be blank !"
-                warningLabel.isHidden = false
+
+                let alertController = UIAlertController(title: "Warning", message: "Username should not be blank !", preferredStyle:.alert)
+                present(alertController, animated: true)
+                alertController.addAction(UIAlertAction(title: "Close",
+                                                        style: UIAlertAction.Style.destructive, handler: { _ in
+                    alertController.dismiss(animated: true)
+                }))
             }
             else if  PasswdTextField.text == ""
-            {   warningLabel.isHidden = true
-                warningLabel.text = "Password should not be blank !"
-                warningLabel.isHidden = false
+            {
+                let alertController = UIAlertController(title: "Warning", message: "Password should not be blank !", preferredStyle:.alert)
+                present(alertController, animated: true)
+                alertController.addAction(UIAlertAction(title: "Close",
+                                                        style: UIAlertAction.Style.destructive, handler: { _ in
+                    alertController.dismiss(animated: true)
+                }))
             }
             else{
-                warningLabel.isHidden = false
-                warningLabel.text = "Incorrect username or password !"
+                let alertController = UIAlertController(title: "Warning", message: "Incorrect username or password !", preferredStyle:.alert)
+                present(alertController, animated: true)
+                alertController.addAction(UIAlertAction(title: "Close",
+                                                        style: UIAlertAction.Style.destructive, handler: { _ in
+                    alertController.dismiss(animated: true)
+                }))
             }
             
         }
