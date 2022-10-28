@@ -32,16 +32,16 @@ class ViewController: UIViewController {
         else
         {
             
-            if !(PasswdTextField.isHidden), PasswdTextField.text == "123456789" { //everthing okey
+            if !(PasswdTextField.isHidden), PasswdTextField.text == "123456789" {
                 LoadinfoActivtyIndicator.startAnimating()
                 warningLabel.isHidden = true
             }
-            else if UsrnmeTextField.text == "" { //username empty
+            else if UsrnmeTextField.text == "" {
                 warningLabel.isHidden = true
                 warningLabel.text = "Username should not be blank !"
                 warningLabel.isHidden = false
             }
-            else if  PasswdTextField.text == "" //password empty
+            else if  PasswdTextField.text == ""
             {   warningLabel.isHidden = true
                 warningLabel.text = "Password should not be blank !"
                 warningLabel.isHidden = false
