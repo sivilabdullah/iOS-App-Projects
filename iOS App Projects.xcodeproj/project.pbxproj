@@ -56,15 +56,39 @@
 		58E1866A290BB7C200E4033D /* iOS App Projects */ = {
 			isa = PBXGroup;
 			children = (
+				58E18681290BB87700E4033D /* Views */,
+				58E18680290BB85E00E4033D /* Controllers */,
+				58E1867F290BB80000E4033D /* Supporting Files */,
+			);
+			path = "iOS App Projects";
+			sourceTree = "<group>";
+		};
+		58E1867F290BB80000E4033D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
 				58E1866B290BB7C200E4033D /* AppDelegate.swift */,
 				58E1866D290BB7C200E4033D /* SceneDelegate.swift */,
-				58E1866F290BB7C200E4033D /* ViewController.swift */,
-				58E18671290BB7C200E4033D /* Main.storyboard */,
 				58E18674290BB7C300E4033D /* Assets.xcassets */,
 				58E18676290BB7C300E4033D /* LaunchScreen.storyboard */,
 				58E18679290BB7C300E4033D /* Info.plist */,
 			);
-			path = "iOS App Projects";
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		58E18680290BB85E00E4033D /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				58E1866F290BB7C200E4033D /* ViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		58E18681290BB87700E4033D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				58E18671290BB7C200E4033D /* Main.storyboard */,
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
