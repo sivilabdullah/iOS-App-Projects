@@ -8,20 +8,50 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
     @IBOutlet weak var PasswdTextField: UITextField!
     @IBOutlet weak var UsrnmeTextField: UITextField!
     @IBOutlet weak var LoadinfoActivtyIndicator: UIActivityIndicatorView!
+    @IBOutlet weak var warningLabel : UILabel!
     override func viewDidLoad() {
+        
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-    }
-
-    @IBAction func LogInBtnAct(_ sender: UIButton) {
-        print(" Hi \(UsrnmeTextField.text ?? "Please Enter a valid username")")
-        print (" Your Password : \(PasswdTextField.text ?? "incorrect email username or password.") ..is secure ")
-        LoadinfoActivtyIndicator.startAnimating()
+        warningLabel.isHidden = true
+        
     }
     
+    @IBAction func LogInBtnAct(_ sender: UIButton) {
+        
+        if UsrnmeTextField.text == "abdullah" , PasswdTextField.isHidden
+        {
+            warningLabel.isHidden = true
+            PasswdTextField.isHidden = false
+            
+        }
+        
+        else
+        {
+            
+            if !(PasswdTextField.isHidden), PasswdTextField.text == "123456789" { //everthing okey
+                LoadinfoActivtyIndicator.startAnimating()
+                warningLabel.isHidden = true
+            }
+            else if UsrnmeTextField.text == "" { //username empty
+                warningLabel.isHidden = true
+                warningLabel.text = "Username should not be blank !"
+                warningLabel.isHidden = false
+            }
+            else if  PasswdTextField.text == "" //password empty
+            {   warningLabel.isHidden = true
+                warningLabel.text = "Password should not be blank !"
+                warningLabel.isHidden = false
+            }
+            else{
+                warningLabel.isHidden = false
+                warningLabel.text = "Incorrect username or password !"
+            }
+            
+        }
+    }
 }
 
